@@ -1,0 +1,24 @@
+{
+  "name": "@ansrlm/infinitescroll-example",
+  "homepage": "https://ansrlm.github.io/infinitescroll",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "react": "file:../node_modules/react",
+    "react-scripts": "^3.0.1",
+    "infinitescroll": "file:.."
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
