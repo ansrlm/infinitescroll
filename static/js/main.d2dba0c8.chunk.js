@@ -1,2 +1,0 @@
-(this["webpackJsonp@ansrlm/infinitescroll-example"]=this["webpackJsonp@ansrlm/infinitescroll-example"]||[]).push([[0],[function(n,o,e){n.exports=e(2)},function(n,o,e){},function(n,o,e){"use strict";e.r(o);e(1),new function(n,o){console.log(n),console.log(o)}("string",{object:"object"})}],[[0,1]]]);
-//# sourceMappingURL=main.d2dba0c8.chunk.js.map
