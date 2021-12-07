@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/infinitescroll/static/js/main.34339889.chunk.js",
-    "main.js.map": "/infinitescroll/static/js/main.34339889.chunk.js.map",
+    "main.js": "/infinitescroll/static/js/main.14c7b54f.chunk.js",
+    "main.js.map": "/infinitescroll/static/js/main.14c7b54f.chunk.js.map",
     "runtime-main.js": "/infinitescroll/static/js/runtime-main.fcc8b8b0.js",
     "runtime-main.js.map": "/infinitescroll/static/js/runtime-main.fcc8b8b0.js.map",
     "static/js/2.edc3cf96.chunk.js": "/infinitescroll/static/js/2.edc3cf96.chunk.js",
     "static/js/2.edc3cf96.chunk.js.map": "/infinitescroll/static/js/2.edc3cf96.chunk.js.map",
     "index.html": "/infinitescroll/index.html",
-    "precache-manifest.c73787792538bc741f814799cd157e09.js": "/infinitescroll/precache-manifest.c73787792538bc741f814799cd157e09.js",
+    "precache-manifest.212028cae4014d5d1747be97beda39f8.js": "/infinitescroll/precache-manifest.212028cae4014d5d1747be97beda39f8.js",
     "service-worker.js": "/infinitescroll/service-worker.js",
     "static/js/2.edc3cf96.chunk.js.LICENSE.txt": "/infinitescroll/static/js/2.edc3cf96.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fcc8b8b0.js",
     "static/js/2.edc3cf96.chunk.js",
-    "static/js/main.34339889.chunk.js"
+    "static/js/main.14c7b54f.chunk.js"
   ]
 }
