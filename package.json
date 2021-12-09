@@ -1,6 +1,6 @@
 {
   "name": "@ansrlm/infinitescroll",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "infinite scroll by using @egjs/visible",
   "author": "key",
   "license": "MIT",
@@ -25,12 +25,13 @@
   },
   "keywords": [
     "infinite",
-    "scroll"
+    "scroll",
+    "jquery"
   ],
   "bugs": {
     "url": "https://github.com/ansrlm/infinitescroll/issues"
   },
-  "homepage": "https://github.com/ansrlm/infinitescroll#readme",
+  "homepage": "https://ansrlm.github.io/infinitescroll",
   "dependencies": {
     "@egjs/visible": "^2.2.0"
   },
@@ -46,6 +47,7 @@
     "@rollup/plugin-typescript": "^5.0.2",
     "@rollup/plugin-url": "^5.0.1",
     "react": "^16.9.0",
+    "jquery": "^3.2.1",
     "gh-pages": "^2.0.1",
     "rollup": "^2.26.9",
     "rollup-plugin-peer-deps-external": "^2.2.0",

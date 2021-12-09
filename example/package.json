@@ -5,9 +5,10 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@egjs/visible": "^2.2.0",
+    "infinitescroll": "file:..",
     "react": "file:../node_modules/react",
-    "react-scripts": "^3.0.1",
-    "infinitescroll": "file:.."
+    "react-scripts": "^3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

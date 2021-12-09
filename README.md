@@ -7,13 +7,30 @@
 ## Install
 
 ```bash
-npm install --save infinitescroll
+npm install --save @ansrlm/infinitescroll
 ```
 
 ## Usage
 
 ```ts
-const infiniteScroll = new InfiniteScroll();
+const infiniteScroll = new InfiniteScroll({
+	listContainer: document.querySelector('.listContainer'),
+	endChecker: {
+		container: document.querySelector('.spinnerContainer'),
+		targetClass: 'loading',
+	},
+	fetchData,
+	callbackFetchData,
+	options: { type: 'append', expandSize: 15 },
+});
+
+infiniteScroll.mount();
+```
+
+## Demo
+
+```html
+<a href="ansrlm.github.io/infinitescroll" />
 ```
 
 ## License

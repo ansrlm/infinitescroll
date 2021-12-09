@@ -1,0 +1,248 @@
+.demobox {
+  position: relative;
+  width: 100%;
+}
+
+.wrap {
+  position: relative;
+  float: left;
+  padding: 0;
+  height: 500px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 10;
+  background: #eee;
+}
+
+.scroller {
+  position: relative;
+}
+
+.item {
+  display: block;
+  background-color: #ccc;
+  width: 260px;
+  height: 60px;
+  border-radius: 5px;
+  margin: 30px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  position: relative;
+  border-radius: 5px;
+  transform: translateY(0);
+  -webkit-transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 100;
+}
+
+.card:after {
+  content: "";
+  border-radius: 5px;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  -webkit-transition: all 1.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 1.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card.focus {
+  margin: 30px auto;
+  -webkit-transform: scale(1.15, 1.15);
+  transform: scale(1.15, 1.15);
+}
+
+.card.focus::after {
+  opacity: 1;
+}
+
+.loading_bar {
+  height: 15px;
+  padding-bottom: 15px;
+}
+
+.block {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 38px;
+  height: 10px;
+  margin: -5px 0 0 -19px;
+}
+
+.spinner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background: #333;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.dot1 {
+  background-color: red;
+  animation-name: dot1;
+}
+
+.dot2 {
+  background-color: orange;
+  animation-name: dot2;
+}
+
+.dot3 {
+  background-color: yellow;
+  animation-name: dot3;
+}
+
+.dot4 {
+  background-color: red;
+  animation-name: dot4;
+}
+
+.dot5 {
+  background-color: orange;
+  animation-name: dot5;
+}
+
+.dot6 {
+  background-color: yellow;
+  animation-name: dot6;
+}
+
+@keyframes dot1 {
+  0% {
+    transform: translateX(26px) scale(1);
+  }
+  30% {
+    transform: translateX(26px) scale(0);
+  }
+  66% {
+    transform: translateX(0px) scale(0);
+  }
+  100% {
+    transform: translateX(0px) scale(0);
+  }
+}
+
+@keyframes dot2 {
+  0% {
+    transform: translateX(13px) scale(1);
+  }
+
+  33% {
+    transform: translateX(26px) scale(1);
+  }
+
+  66% {
+    transform: translateX(26px) scale(0);
+  }
+
+  100% {
+    transform: translateX(26px) scale(0);
+  }
+}
+
+@keyframes dot3 {
+  0% {
+    transform: translateX(0px) scale(1);
+  }
+
+  33% {
+    transform: translateX(13px) scale(1);
+  }
+
+  66% {
+    transform: translateX(26px) scale(1);
+  }
+
+  100% {
+    transform: translateX(26px) scale(0);
+  }
+}
+
+@keyframes dot4 {
+  0% {
+    transform: translateX(0px) scale(0);
+  }
+
+  3% {
+    transform: translateX(0px) scale(0);
+  }
+
+  33% {
+    transform: translateX(0px) scale(1);
+  }
+
+  66% {
+    transform: translateX(13px) scale(1);
+  }
+
+  100% {
+    transform: translateX(26px) scale(1);
+  }
+}
+
+@keyframes dot5 {
+  0% {
+    transform: translateX(0px) scale(0);
+  }
+
+  33% {
+    transform: translateX(0px) scale(0);
+  }
+
+  36% {
+    transform: translateX(0px) scale(0);
+  }
+
+  66% {
+    transform: translateX(0px) scale(1);
+  }
+
+  100% {
+    transform: translateX(13px) scale(1);
+  }
+}
+
+@keyframes dot6 {
+  0% {
+    transform: translateX(0px) scale(0);
+  }
+
+  33% {
+    transform: translateX(0px) scale(0);
+  }
+
+  66% {
+    transform: translateX(0px) scale(0);
+  }
+
+  69% {
+    transform: translateX(0px) scale(0);
+  }
+
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+.highlighter-rouge {
+  clear: both;
+  padding-top: 34px;
+}
