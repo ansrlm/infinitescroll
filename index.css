@@ -63,19 +63,19 @@
   opacity: 1;
 }
 
-.api_loading {
+.loading_bar {
   height: 15px;
   padding-bottom: 15px;
 }
 
-.api_load_wrap {
+.block {
   position: relative;
   float: left;
   width: 100%;
   height: 100%;
 }
 
-.api_load {
+.center {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -84,7 +84,7 @@
   margin: -5px 0 0 -19px;
 }
 
-.api_load .load_dot {
+.spinner {
   position: absolute;
   width: 10px;
   height: 10px;
@@ -95,33 +95,33 @@
   animation-iteration-count: infinite;
 }
 
-.api_load .dot1 {
-  background-color: #2196F3;
+.dot1 {
+  background-color: red;
   animation-name: dot1;
 }
 
-.api_load .dot2 {
-  background-color: #00BCD4;
+.dot2 {
+  background-color: orange;
   animation-name: dot2;
 }
 
-.api_load .dot3 {
-  background-color: #03C75A;
+.dot3 {
+  background-color: yellow;
   animation-name: dot3;
 }
 
-.api_load .dot4 {
-  background-color: #2196F3;
+.dot4 {
+  background-color: red;
   animation-name: dot4;
 }
 
-.api_load .dot5 {
-  background-color: #00BCD4;
+.dot5 {
+  background-color: orange;
   animation-name: dot5;
 }
 
-.api_load .dot6 {
-  background-color: #03C75A;
+.dot6 {
+  background-color: yellow;
   animation-name: dot6;
 }
 
