@@ -1,7 +1,7 @@
 import Visible from "@egjs/visible";
-import $ from "jquery";
 
 interface Props {
+  scrollContainer?: HTMLElement;
   listContainer: HTMLElement;
   endChecker: {
     container: HTMLElement | Document | Window;
@@ -31,11 +31,15 @@ class InfiniteScroll {
   private fetchData?: FetchData;
   private callbackFetchData?: CallbackFetchData;
   private $visible?: Visible | null;
+  private $loadingBar?: HTMLElement | null;
 
   constructor(props: Props) {
     this.props = props;
     this.fetchData = this.props.fetchData;
     this.callbackFetchData = this.props.callbackFetchData;
+    this.$loadingBar = (
+      this.props.endChecker.container as Element
+    ).querySelector<HTMLElement>(`.${this.props.endChecker.targetClass}`);
   }
 
   public mount = (): void => {
@@ -55,25 +59,29 @@ class InfiniteScroll {
     if (this.fetchData && event.visible.length) {
       this.fetchData()
         .then((response) => {
-          this.props.options.type === "append"
-            ? $(this.props.listContainer).append(response.data)
-            : $(this.props.listContainer).html(response.data);
+          if (this.props.options.type === "append") {
+            this.props.listContainer.innerHTML += response.data;
+          } else if (this.props.options.type === "render") {
+            this.props.scrollContainer
+              ? this.props.scrollContainer.scrollTo(
+                  this.props.scrollContainer.scrollLeft,
+                  0
+                )
+              : window.scrollTo(window.scrollX, 0);
+            this.props.listContainer.innerHTML = response.data;
+          } else {
+            throw new Error("there is no infinite scroll type");
+          }
 
           if (response.fetchData) {
             if (this.props.options.withBlinkAnimation) {
-              $(this.props.endChecker.container)
-                .find(`.${this.props.endChecker.targetClass}`)
-                .hide();
+              this.$loadingBar && (this.$loadingBar.style.display = "none");
               setTimeout(() => {
-                $(this.props.endChecker.container)
-                  .find(`.${this.props.endChecker.targetClass}`)
-                  .show();
+                this.$loadingBar && (this.$loadingBar.style.display = "block");
               }, 20);
             }
           } else {
-            $(this.props.endChecker.container)
-              .find(`.${this.props.endChecker.targetClass}`)
-              .hide();
+            this.$loadingBar && (this.$loadingBar.style.display = "none");
           }
 
           this.fetchData = response.fetchData;
@@ -84,9 +92,7 @@ class InfiniteScroll {
         })
         .catch((error) => {
           console.error(error);
-          $(this.props.endChecker.container)
-            .find(`.${this.props.endChecker.targetClass}`)
-            .hide();
+          this.$loadingBar && (this.$loadingBar.style.display = "none");
         });
     }
   };

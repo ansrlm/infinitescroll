@@ -14,10 +14,11 @@ npm install --save @ansrlm/infinitescroll
 
 ```ts
 const infiniteScroll = new InfiniteScroll({
-	listContainer: document.querySelector('.listContainer'),
+	scrollContainer: document.querySelector('.scroll'),
+	listContainer: document.querySelector('.list'),
 	endChecker: {
-		container: document.querySelector('.spinnerContainer'),
-		targetClass: 'loading',
+		container: document.querySelector('.wrap'),
+		targetClass: 'loading_bar',
 	},
 	fetchData,
 	callbackFetchData,

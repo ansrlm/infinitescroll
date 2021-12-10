@@ -13,7 +13,10 @@ visibleView.on("change", function (e) {
 
 visibleView.observe({ delay: 100, containment: false });
 
+const wait = (time) => new Promise((resolve) => setTimeout(resolve, time));
+
 const fetchData = async function () {
+  await wait(1000);
   visibleView.unobserve();
   visibleView.off();
   visibleView = null;
@@ -38,7 +41,8 @@ const callbackFetchData = function () {
 };
 
 const infiniteScroll = new InfiniteScroll({
-  listContainer: document.querySelector(".scroller"),
+  scrollContainer: document.querySelector(".scroll"),
+  listContainer: document.querySelector(".list"),
   endChecker: {
     container: document.querySelector(".wrap"),
     targetClass: "loading_bar",

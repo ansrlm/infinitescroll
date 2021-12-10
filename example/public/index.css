@@ -3,7 +3,7 @@
   width: 100%;
 }
 
-.wrap {
+.scroll {
   position: relative;
   float: left;
   padding: 0;
@@ -14,7 +14,7 @@
   background: #eee;
 }
 
-.scroller {
+.list {
   position: relative;
 }
 
@@ -96,32 +96,32 @@
 }
 
 .dot1 {
-  background-color: red;
+  background-color: gray;
   animation-name: dot1;
 }
 
 .dot2 {
-  background-color: orange;
+  background-color: black;
   animation-name: dot2;
 }
 
 .dot3 {
-  background-color: yellow;
+  background-color: darkgray;
   animation-name: dot3;
 }
 
 .dot4 {
-  background-color: red;
+  background-color: gray;
   animation-name: dot4;
 }
 
 .dot5 {
-  background-color: orange;
+  background-color: black;
   animation-name: dot5;
 }
 
 .dot6 {
-  background-color: yellow;
+  background-color: darkgray;
   animation-name: dot6;
 }
 
