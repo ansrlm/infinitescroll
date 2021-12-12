@@ -1,4 +1,4 @@
-.demobox {
+.demo {
   position: relative;
   width: 100%;
 }
@@ -242,7 +242,7 @@
   }
 }
 
-.highlighter-rouge {
+.description {
   clear: both;
   padding-top: 34px;
 }
