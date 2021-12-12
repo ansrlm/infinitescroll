@@ -1,6 +1,6 @@
 {
   "name": "@ansrlm/infinitescroll",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A class that appends the data when end checker is visible",
   "author": "key",
   "license": "MIT",

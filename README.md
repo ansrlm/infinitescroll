@@ -1,6 +1,6 @@
 # infinitescroll
 
-> A class that appends the data when end checker is visible
+A class that appends the data when end checker is visible
 
 [![NPM](https://img.shields.io/npm/v/@ansrlm/infinitescroll.svg)](https://www.npmjs.com/package/@ansrlm/infinitescroll) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -30,7 +30,7 @@ infiniteScroll.mount();
 
 ## Demo
 
-[Here](ansrlm.github.io/infinitescroll) is the demo of infinitescroll
+[Here](https://ansrlm.github.io/infinitescroll/) is the demo of infinitescroll
 
 ```html
 <a href="ansrlm.github.io/infinitescroll" />
