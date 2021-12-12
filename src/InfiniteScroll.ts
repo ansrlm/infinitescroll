@@ -60,7 +60,10 @@ class InfiniteScroll {
       this.fetchData()
         .then((response) => {
           if (this.props.options.type === "append") {
-            this.props.listContainer.innerHTML += response.data;
+            this.props.listContainer.insertAdjacentHTML(
+              "beforeend",
+              response.data
+            );
           } else if (this.props.options.type === "render") {
             this.props.scrollContainer
               ? this.props.scrollContainer.scrollTo(

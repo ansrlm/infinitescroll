@@ -1,12 +1,10 @@
 import Visible from "@egjs/visible";
 import InfiniteScroll from "infinitescroll";
 
-let visibleView = new Visible(".wrap", {
+let visibleView = new Visible(".scroll", {
   targetClass: "card",
   expandSize: 0,
-});
-
-visibleView.on("change", function (e) {
+}).on("change", function (e) {
   e.visible.forEach((el) => el.classList.add("focus"));
   e.invisible.forEach((el) => el.classList.remove("focus"));
 });
@@ -16,9 +14,9 @@ visibleView.observe({ delay: 100, containment: false });
 const wait = (time) => new Promise((resolve) => setTimeout(resolve, time));
 
 const fetchData = async function () {
-  await wait(1000);
+  await wait(700);
   visibleView.unobserve();
-  visibleView.off();
+  visibleView.off("change");
   visibleView = null;
   return {
     data: '<div class="card item"></div><div class="card item"></div><div class="card item"></div><div class="card item"></div><div class="card item"></div><div class="card item"></div><div class="card item"></div><div class="card item"></div><div class="card item"></div><div class="card item"></div>',
@@ -27,11 +25,10 @@ const fetchData = async function () {
 };
 
 const callbackFetchData = function () {
-  visibleView = new Visible(".wrap", {
+  visibleView = new Visible(".scroll", {
     targetClass: "card",
     expandSize: 0,
-  });
-  visibleView.on("change", function (e) {
+  }).on("change", function (e) {
     e.visible.forEach((el) => el.classList.add("focus"));
     e.invisible.forEach((el) => el.classList.remove("focus"));
   });
@@ -44,7 +41,7 @@ const infiniteScroll = new InfiniteScroll({
   scrollContainer: document.querySelector(".scroll"),
   listContainer: document.querySelector(".list"),
   endChecker: {
-    container: document.querySelector(".wrap"),
+    container: document,
     targetClass: "loading_bar",
   },
   fetchData,
